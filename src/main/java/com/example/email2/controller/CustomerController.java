@@ -20,8 +20,6 @@ public class CustomerController {
     @ResponseBody
     @GetMapping("/findCustomer/{phoneNumber}")
     public Customer retrieveCustomers(@PathVariable String phoneNumber) {
-        // Customer jack = new Customer();
-        // jack.setPhone_number(phoneNumber)
         Customer jack = customerService.findByPhoneNumber(phoneNumber);
         return jack;
     }
